@@ -11,7 +11,7 @@ let sideBar = document.getElementById("side-bar");
 let allowForm = true;
 
 const CHAT_ID = "892205925"
-const BOT_TOKEN = "8536852968:AAFD6mKh0Ic2CJpv4ujPi91eT6YWDvZz"
+const BOT_TOKEN = "8536852969:AAFD6mKh0Ic2CJpv4ujPi91eT6YWDvZzNtE"
 
 function sendForm() {
   for (let i = 0; i < inputs.length; i++) {
