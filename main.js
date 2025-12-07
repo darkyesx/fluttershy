@@ -10,8 +10,8 @@ let button = document.getElementById("button");
 let sideBar = document.getElementById("side-bar");
 let allowForm = true;
 
-const CHAT_ID = "1682195869"
-const BOT_TOKEN = "8129002117:AAFsEYM6PGd1U8oaARgUtFwHC3dSMWcIsxU"
+const CHAT_ID = "5567"
+const BOT_TOKEN = "8129002117:vg"
 
 function sendForm() {
   for (let i = 0; i < inputs.length; i++) {
