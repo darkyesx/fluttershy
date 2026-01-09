@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умная банка для круп</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-jar"></i>
+                <span>SmartJar</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#features">Преимущества</a></li>
+                <li><a href="#register">Регистрация</a></li>
+                <li><a href="dashboard.html">Мои банки</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Умная банка для круп</h1>
+                <p class="subtitle">Контролируйте количество продуктов дома с помощью датчика расстояния Arduino</p>
+                <a href="#register" class="cta-button">Начать использовать</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Умная банка">
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>О проекте</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Мы встроили датчик расстояния Arduino в крышку банки для крупы. Эта банка показывает количество оставшихся продуктов, что помогает работающим людям всегда знать, сколько круп осталось дома.</p>
+                    <p>Больше не нужно открывать каждую банку, чтобы проверить остатки. Вся информация доступна на нашем сайте в реальном времени!</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-microchip"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section dark">
+            <h2>Преимущества нашей системы</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Уведомления</h3>
+                    <p>Получайте оповещения, когда крупа заканчивается</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Статистика</h3>
+                    <p>Анализируйте потребление и планируйте покупки</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Доступ везде</h3>
+                    <p>Проверяйте остатки с любого устройства</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>История</h3>
+                    <p>Отслеживайте, как быстро расходуются продукты</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="section">
+            <h2>Регистрация</h2>
+            <div class="register-container">
+                <div class="register-form">
+                    <h3>Создать аккаунт</h3>
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Подтвердите пароль:</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                        <p class="login-link">Уже есть аккаунт? <a href="#" id="loginToggle">Войти</a></p>
+                    </form>
+                    
+                    <form id="loginForm" class="hidden">
+                        <h3>Вход в аккаунт</h3>
+                        <div class="form-group">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Пароль:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Войти</button>
+                        <p class="login-link">Нет аккаунта? <a href="#" id="registerToggle">Зарегистрироваться</a></p>
+                    </form>
+                </div>
+                <div class="register-info">
+                    <h3>После регистрации вы сможете:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Добавлять умные банки</li>
+                        <li><i class="fas fa-check-circle"></i> Настраивать уведомления</li>
+                        <li><i class="fas fa-check-circle"></i> Приглашать членов семьи</li>
+                        <li><i class="fas fa-check-circle"></i> Получать советы по покупкам</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SmartJar</h4>
+                <p>Умное решение для контроля продуктов</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>Email: info@smartjar.ru</p>
+            </div>
+            <div class="footer-section">
+                <h4>Технологии</h4>
+                <p>Arduino • Датчики • Веб-интерфейс</p>
+            </div>
+        </div>
+        <p class="copyright">© 2023 SmartJar Project. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
