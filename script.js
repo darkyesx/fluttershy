@@ -1,4 +1,4 @@
-// Регистрация/вход пользователя
+// Регистрация/вход пользователяя
 document.addEventListener('DOMContentLoaded', function() {
     // Переключение между формами регистрации и входа
     const registrationForm = document.getElementById('registrationForm');
