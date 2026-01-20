@@ -1,158 +1,204 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Умная банка для круп</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cereal jar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-jar"></i>
-                <span>SmartJar</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">О проекте</a></li>
-                <li><a href="#features">Преимущества</a></li>
-                <li><a href="#register">Регистрация</a></li>
-                <li><a href="dashboard.html">Мои банки</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a class="menu-item" href="#main">Главная</a>
+        <a class="menu-item" href="#about">О банке</a>
+        <a class="menu-item" href="#achivments">Достижения банки</a>
+        <a class="menu-item" href="#contact">Контакты</a>
+      </nav>
+      <div class="mobile-block">
+        <h1>Cereal jar</h1>
+        <img
+          class="menu-icon"
+          src="images/menu.svg"
+          alt="Menu Icon"
+          onclick="openSideBar()"
+        />
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Умная банка для круп</h1>
-                <p class="subtitle">Контролируйте количество продуктов дома с помощью датчика расстояния Arduino</p>
-                <a href="#register" class="cta-button">Начать использовать</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Умная банка">
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <h2>О проекте</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Мы встроили датчик расстояния Arduino в крышку банки для крупы. Эта банка показывает количество оставшихся продуктов, что помогает работающим людям всегда знать, сколько круп осталось дома.</p>
-                    <p>Больше не нужно открывать каждую банку, чтобы проверить остатки. Вся информация доступна на нашем сайте в реальном времени!</p>
-                </div>
-                <div class="about-image">
-                    <i class="fas fa-microchip"></i>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="section dark">
-            <h2>Преимущества нашей системы</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Уведомления</h3>
-                    <p>Получайте оповещения, когда крупа заканчивается</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Статистика</h3>
-                    <p>Анализируйте потребление и планируйте покупки</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Доступ везде</h3>
-                    <p>Проверяйте остатки с любого устройства</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-history"></i>
-                    </div>
-                    <h3>История</h3>
-                    <p>Отслеживайте, как быстро расходуются продукты</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="register" class="section">
-            <h2>Регистрация</h2>
-            <div class="register-container">
-                <div class="register-form">
-                    <h3>Создать аккаунт</h3>
-                    <form id="registrationForm">
-                        <div class="form-group">
-                            <label for="name">Имя:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Пароль:</label>
-                            <input type="password" id="password" name="password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm-password">Подтвердите пароль:</label>
-                            <input type="password" id="confirm-password" name="confirm-password" required>
-                        </div>
-                        <button type="submit" class="submit-btn">Зарегистрироваться</button>
-                        <p class="login-link">Уже есть аккаунт? <a href="#" id="loginToggle">Войти</a></p>
-                    </form>
-                    
-                    <form id="loginForm" class="hidden">
-                        <h3>Вход в аккаунт</h3>
-                        <div class="form-group">
-                            <label for="login-email">Email:</label>
-                            <input type="email" id="login-email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="login-password">Пароль:</label>
-                            <input type="password" id="login-password" name="password" required>
-                        </div>
-                        <button type="submit" class="submit-btn">Войти</button>
-                        <p class="login-link">Нет аккаунта? <a href="#" id="registerToggle">Зарегистрироваться</a></p>
-                    </form>
-                </div>
-                <div class="register-info">
-                    <h3>После регистрации вы сможете:</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Добавлять умные банки</li>
-                        <li><i class="fas fa-check-circle"></i> Настраивать уведомления</li>
-                        <li><i class="fas fa-check-circle"></i> Приглашать членов семьи</li>
-                        <li><i class="fas fa-check-circle"></i> Получать советы по покупкам</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>SmartJar</h4>
-                <p>Умное решение для контроля продуктов</p>
-            </div>
-            <div class="footer-section">
-                <h4>Контакты</h4>
-                <p>Email: info@smartjar.ru</p>
-            </div>
-            <div class="footer-section">
-                <h4>Технологии</h4>
-                <p>Arduino • Датчики • Веб-интерфейс</p>
-            </div>
+      <div id="side-bar">
+        <img
+          class="menu-close"
+          src="images/close.svg"
+          alt="Menu Close"
+          onclick="closeSideBar()"
+        />
+        <div class="menu-items">
+          <a class="menu-item" href="#main">Главная</a>
+          <a class="menu-item" href="#about">О банке</a>
+          <a class="menu-item" href="#achivments">Достижения банки</a>
+          <a class="menu-item" href="#contact">Контакты</a>
         </div>
-        <p class="copyright">© 2023 SmartJar Project. Все права защищены.</p>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
-</body>
+      <section id="main">
+        <div class="main-text">
+          <h1 class="header">Cereal jar</h1>
+          <p class="text">
+            Cereal jar — это не просто банка, это 
+            ваш персональный помощник на кухне.
+            Забудьте о ситуациях, когда вы начинаете готовить 
+            и понимаете, что гречка или мука внезапно закончились.
+            Наши умные банки оснащены датчиком, встроенным в крышку,
+            который измеряет уровень продукта внутри.
+          </p>
+          <div class="skills-tags">
+            <span class="tag">крупы</span>
+            <span class="tag">макаронные изделия</span>
+            <span class="tag">сахар</span>
+          </div>
+        </div>
+        <img
+          class="avatar"
+          src="https://famet.ru/images/product_images/popup_images/13726_0.jpg"
+          alt="Фото банки"
+        />
+      </section>
+
+      <section id="about" style="position: relative">
+        <div class="about-content">
+          <h1>Обо мне</h1>
+          <div class="about-wrapper">
+            <img
+              class="avatar about-avatar"
+              src="https://cdn.poryadok.ru/upload/iblock/41f/41f32036a0f302925b6b8ae483ff3995.JPG"
+              alt="Фото банки"
+            />
+            <div class="about-text">
+              <p class="about-paragraph">
+                Как это работает?
+                
+                Вы просто засыпаете любой сыпучий продукт
+                в стильную и герметичную банку. Умная крышка
+                делает всё остальное: она постоянно отслеживает
+                уровень продукта, и передает эти данные на ваш телефон.
+                Вы можете проверить остатки в любое время и в любом месте
+                — находясь на работе, в магазине или в гостях.
+              </p>
+              <p class="about-paragraph">
+                Вы можете использовать банку для любых продуктов и вещей.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achivments">
+        <h1>Достижения банки</h1>
+        <div class="achivments-container">
+          <div class="achivment-card">
+            <div class="achivment-icon">🍪</div>
+            <h3>Кто может использовать эти банки?</h3>
+            <p>
+              Занятые профессионалы и работающие люди, 
+              у которых нет времени на постоянную проверку запасов. 
+              Они могут удаленно составить список покупок, прежде чем отправиться домой.
+              Люди, которые хотят систематизировать свое питание и всегда быть уверены,
+              что дома есть всё для приготовления завтрака, обеда и ужина.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🍬</div>
+            <h3>Преимущества и плюсы</h3>
+            <p>
+              Никогда не оставаться без нужного продукта.
+              Вы всегда будете знать, что пора купить гречку,
+              еще до того, как она закончится.
+              Экономия времени и денег. Вы перестанете покупать
+              лишнее "на всякий случай" и забудете о спонтанных 
+              поездках в магазин.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🌰</div>
+            <h3>Применение в бизнесе</h3>
+            <p>
+              Для бизнеса, где важно наличие расходных материалов
+              в нескольких помещениях одновременно, банки становятся 
+              нужным инструментом длоя контроля и пополнения запаса.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🍿</div>
+            <h3>Перспектива развития</h3>
+            <p>
+              Система может масштабироваться до большого количества банок,
+              находящихся в разных филиалах и помещениях,благодаря этому
+              можно отслеживать количество материалов и делать большие
+              закупки нужного товара.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h1>Свяжитесь с нами</h1>
+        <p class="contact-description">
+          Хотите сделать заказ, задать вопрос или больше узнать о нашей банке? 
+          Заполните форму и мы свяжемся с вами!❤️
+        </p>
+        <form>
+          <label for="name">Ваше имя</label>
+          <input
+            id="name"
+            class="input"
+            name="name"
+            type="text"
+            placeholder="Введите ваше имя"
+          />
+
+          <label for="age">Количество баночек</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            placeholder="Введите количество для заказа"
+          />
+
+          <label for="email">Ваш e-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+          />
+
+          <label for="message">Ваше сообщение</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Опишите свой заказ или задайте вопрос"
+          ></textarea>
+        </form>
+        <button id="button" class="form-btn" onclick="sendForm()">
+          Отправить
+        </button>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="tel:+79775069580">📞 +7 (977) 506-95-80</a>
+          <a href="mailto:flionlin@ya.ru">✉️ flionlin@ya.ru</a>
+        </div>
+        <p class="footer-text">© 2025 Банка. Все права защищены.</p>
+        <div class="social-links">
+          <span>Узнавайте всё первыми:</span>
+          <a href="https://t.me/smartjar" class="social-link" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="main.js"></script>
 </html>
