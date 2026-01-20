@@ -29,7 +29,7 @@ function sendForm() {
       chat_id: CHAT_ID,
       text: `New offer:\n${name.value}\n${age.value}\n${email.value}\n${message.value}\n`,
     }
-
+    
     fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: "POST",
       headers: {"Content-Type" : "application/json"},
