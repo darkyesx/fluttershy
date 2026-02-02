@@ -64,7 +64,7 @@ h2 {
     align-items: center;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #3498db;
+    color: #52758d;
 }
 
 .logo i {
@@ -110,7 +110,7 @@ h2 {
     align-items: center;
     justify-content: space-between;
     padding: 60px 5%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #a9bcd9 0%, #a9bcd9 100%);
     min-height: 80vh;
 }
 
@@ -138,11 +138,11 @@ h2 {
 
 /* Кнопки */
 .cta-button, .submit-btn, .add-jar-btn {
-    background-color: #3498db;
+    background-color: #52758d;
     color: white;
     border: none;
     padding: 15px 30px;
-    border-radius: 50px;
+    border-radius: 20px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -186,7 +186,7 @@ h2 {
     flex: 1;
     text-align: center;
     font-size: 10rem;
-    color: #3498db;
+    color: #52758d;
 }
 
 /* Преимущества */
@@ -221,7 +221,7 @@ h2 {
 }
 
 .dark .feature-icon {
-    color: #2ecc71;
+    color: #dce0ed;
 }
 
 /* Форма регистрации */
