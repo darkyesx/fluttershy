@@ -73,8 +73,11 @@ h2 {
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0
 }
 
 .nav-links li {
